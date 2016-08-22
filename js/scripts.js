@@ -37,5 +37,6 @@ $(document).ready(function() {
 
   $(".remove-complete").click(function() {
     $(":checked").parent().remove();
+    $("#show-task").hide();
   });
 });
