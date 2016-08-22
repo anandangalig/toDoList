@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     $(".tasks").last().click(function() {
       $("#show-task").show();
-      $("show-task h2").text(newTask.toDoTask);
+      $(".taskName").text(newTask.toDoTask);
       $(".taskCreator").text(newTask.toDoCreator);
       $(".taskDescription").text(newTask.toDoCreator);
       $(".taskStart").text(newTask.toDoOriginDate);
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
     });
 
-    
+
     }
   }
 }

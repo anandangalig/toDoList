@@ -9,6 +9,54 @@
     <title>To Do List</title>
   </head>
   <body>
+    <div class="container">
+      <div class="col-md-6">
+        <h2>Things to Do</h2>
+        <div class="form-group">
+          <label for="inputTask">Task Item</label>
+          <input type="text" class="form-control" id="task">
+        </div>
+        <div class="form-group">
+          <label for="inputTask">Description</label>
+          <input type="text" class="form-control" id="description">
+        </div>
+        <div class="form-group">
+          <label for="inputTask">Author</label>
+          <input type="text" class="form-control" id="creator">
+        </div>
+        <div class="form-group">
+          <label for="inputTask">Author</label>
+          <input type="text" class="form-control" id="start-date">
+        </div>
+        <div class="form-group">
+          <label for="inputTask">Author</label>
+          <input type="text" class="form-control" id="due-date">
+        </div>
+        <div class="form-group">
+          <label for="inputTask">Collaborators</label>
+          <input type="text" class="form-control" id="collaborators">
+        </div>
 
-  </body>
+        <button type="submit" class="btn-success">Add</button>
+      </form>
+
+      <h2>Task List</h2>
+      <ul id="contacts">
+
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div id="show-task">
+        <h2><span class="taskName"></span></h2>
+        <p><span class="taskDescription"></span></p>
+        <p>via <span class="taskCreator"></span></p>
+        <p>teammates:<span
+          class="taskCollaborators"></span></p>
+        <p> <small> initiated on:<span class="taskStart"></span> </small></p>
+        p> <small> initiated on:<span class="taskDue"></span> </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
