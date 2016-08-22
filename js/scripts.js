@@ -22,9 +22,9 @@ $(document).ready(function() {
     var newTask = new toDo(inputCreator, inputTask, inputDescription, inputOriginDate, inputDueDate, inputCollaborators);
 
 
-    $("ol").append("<li><span class='tasks'>" + inputTask + "</span></li>")
+    $(".task-list").append("<div class='checkbox'><input type='checkbox'>" + " " + inputTask + "</div>")
 
-    $(".tasks").last().click(function() {
+    $(".checkbox").last().click(function() {
       $("#show-task").show();
       $(".taskName").text(newTask.toDoTask);
       $(".taskCreator").text(newTask.toDoCreator);
@@ -32,9 +32,10 @@ $(document).ready(function() {
       $(".taskStart").text(newTask.toDoOriginDate);
       $(".taskDue").text(newTask.toDoDueDate);
       $(".taskCollaborators").text(newTask.toDoCollaborators);
-
     });
+  });
 
-
+  $(".remove-complete").click(function() {
+    $(":checked").parent().remove();
   });
 });
