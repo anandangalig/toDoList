@@ -21,13 +21,14 @@ $(document).ready(function() {
 
     var newTask = new toDo(inputCreator, inputTask, inputDescription, inputOriginDate, inputDueDate, inputCollaborators);
 
-    $("ul#task-list").append("<li><span class='tasks'>" + newTask.toDoTask + "</span></li>");
+
+    $("ol").append("<li><span class='tasks'>" + inputTask + "</span></li>")
 
     $(".tasks").last().click(function() {
       $("#show-task").show();
       $(".taskName").text(newTask.toDoTask);
       $(".taskCreator").text(newTask.toDoCreator);
-      $(".taskDescription").text(newTask.toDoCreator);
+      $(".taskDescription").text(newTask.toDoDescription);
       $(".taskStart").text(newTask.toDoOriginDate);
       $(".taskDue").text(newTask.toDoDueDate);
       $(".taskCollaborators").text(newTask.toDoCollaborators);
@@ -35,6 +36,5 @@ $(document).ready(function() {
     });
 
 
-    }
-  }
-}
+  });
+});
